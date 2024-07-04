@@ -1,113 +1,85 @@
-import Image from "next/image";
+"use client";
+import styles from "@/styles/global.css"; // Asegúrate de que esta ruta sea correcta
+import bgvideo from "@/public/video/ensenada.webm";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="relative m-0 flex flex-col h-screen">
+      <video
+        src={bgvideo}
+        autoPlay
+        loop
+        muted
+        className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
+      ></video>
+      <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full h-70 p-4">
+        <h2 className="text-4xl font-bold text-center mb-4">Conoce nuestros servicios</h2>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation
+          loop
+          pagination={{ clickable: true }}
+          spaceBetween={10}
+          slidesPerView={1.25}
+          autoplay={{ delay: 3000, disableOnInteraction: false }} // Configuración de autoplay
+          className="w-full max-w-lg" // Ajusta el tamaño del slider
+        >
+          <SwiperSlide>
+            <img 
+              src="https://img1.wsimg.com/isteam/ip/acf9b939-4a69-4738-9593-ca7630db22ef/57644724_1084088548441632_6898676809861169152_.jpg/:/rs=w:1280"
+              className="object-cover w-full h-100 rounded-lg" // Ajusta el tamaño y estilo de la imagen
             />
-          </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img 
+              src="https://img1.wsimg.com/isteam/ip/acf9b939-4a69-4738-9593-ca7630db22ef/57584251_1084088601774960_8527670034498060288_.jpg/:/rs=w:1280"
+              className="object-cover w-full h-100 rounded-lg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img 
+              src="https://img1.wsimg.com/isteam/ip/acf9b939-4a69-4738-9593-ca7630db22ef/57370573_1084086265108527_5326454600381759488_.jpg/:/rs=w:1280"
+              className="object-cover w-full h-100 rounded-lg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img 
+              src="https://img1.wsimg.com/isteam/ip/acf9b939-4a69-4738-9593-ca7630db22ef/58374951_1084088521774968_4065951509404188672_.jpg/:/rs=w:1280"
+              className="object-cover w-full h-100 rounded-lg"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="bg-slate-400 bg-opacity-70 relative z-10 flex flex-col items-center w-full h-70 p-4">
+        <h6 className="text-4xl font-bold text-center mb-4">Conoce nuestras marcas</h6>
+        <div className="flex flex-wrap justify-between items-center">
+          <img className="h-30 w-60 m-0" src="logos/WEG.png" alt="WEG Logo" />
+          <img className="h-30 w-40 mr-16" src="logos/ABB.png" alt="ABB Logo" />
+          <img className="h-20 w-50 mr-16" src="logos/LEATONG.png" alt="LEATONG Logo" />
+          <img className="h-40 w-70 mr-16" src="logos/bussman.png" alt="BUSSMAN Logo" />
+        </div>
+        <div className="flex flex-wrap justify-between items-center">
+          <img className="h-30 w-60 mr-16" src="logos/QLIGHT.png" alt="QLIGHT Logo" />
+          <img className="h-40 w-70 mr-16" src="logos/WM.png" alt="WM Logo" />
+          <img className="h-50 w-80 mr-16" src="logos/ELEMATIC.png" alt="ELEMATIC Logo" />
+          <img className="h-50 w-80 mr-16" src="logos/CNTD.png" alt="CNTD Logo" />
+        </div>
+        <div className="flex flex-wrap justify-between items-center">
+          <img className="h-50 w-80 mr-16" src="logos/ARGOS.png" alt="ARGOS Logo" />
+          <img className="h-50 w-80 mr-16" src="logos/GIO.png"></img>
+          <img className="h-50 w-80 mr-16" src="logos/OMRON.png"></img>
+          <img className="h-50 w-80 mr-16" src="logos/HOFF.png"></img>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full h-70 p-4">
+            <h3>Next Section.....</h3>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
+

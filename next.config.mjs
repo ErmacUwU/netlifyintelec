@@ -1,4 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import withVideos from 'next-videos';
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Aquí puedes agregar cualquier configuración adicional de Next.js
+};
+
+export default withVideos(nextConfig);
