@@ -1,29 +1,32 @@
 import { Inter } from "next/font/google";
 import Navbar from "@/app/navbar/page";
-import styles from "@/styles/global.css";
+import "@/styles/global.css"; // Asegúrate de que esta ruta sea correcta
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "INTELEC",
-  description: "Venta de material y servicios de Automatizacion y Control Electrico Industrial",
+  description: "Venta de material y servicios de Automatización y Control Eléctrico Industrial",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
       <head>
-        
- 
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body  className={`h-full ${inter.className}`}>
+      <body className={`h-full flex flex-col ${inter.className}`}>
         <header>
           <Navbar />
         </header>
-        <main className="h-full">
+        <main className="flex-grow">
           {children}
         </main>
+        <footer className="bg-blue-700 text-white py-4">
+          <div className="container mx-auto px-4">
+            <p>&copy; {new Date().getFullYear()} INTELEC. Todos los derechos reservados.</p>
+          </div>
+        </footer>
       </body>
     </html>
   );

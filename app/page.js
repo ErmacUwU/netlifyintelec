@@ -1,5 +1,5 @@
 "use client";
-import styles from "@/styles/global.css"; // Asegúrate de que esta ruta sea correcta
+import "@/styles/global.css"; // Asegúrate de que esta ruta sea correcta
 import bgvideo from "@/public/video/ensenada.webm";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -9,7 +9,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 export default function Home() {
   return (
-    <div className="relative m-0 flex flex-col h-screen">
+    <div className="relative m-0 flex flex-col h-full">
       <video
         src={bgvideo}
         autoPlay
@@ -17,7 +17,7 @@ export default function Home() {
         muted
         className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
       ></video>
-      <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full h-70 p-4">
+      <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full p-4">
         <h2 className="text-4xl font-bold text-center mb-4">Conoce nuestros servicios</h2>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -55,7 +55,7 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="bg-slate-400 bg-opacity-70 relative z-10 flex flex-col items-center w-full h-70 p-4">
+      <div className="bg-slate-400 bg-opacity-70 relative z-10 flex flex-col items-center w-full p-4">
         <h6 className="text-4xl font-bold text-center mb-4">Conoce nuestras marcas</h6>
         <div className="flex flex-wrap justify-between items-center">
           <img className="h-30 w-60 m-0" src="logos/WEG.png" alt="WEG Logo" />
@@ -71,15 +71,14 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap justify-between items-center">
           <img className="h-50 w-80 mr-16" src="logos/ARGOS.png" alt="ARGOS Logo" />
-          <img className="h-50 w-80 mr-16" src="logos/GIO.png"></img>
-          <img className="h-50 w-80 mr-16" src="logos/OMRON.png"></img>
-          <img className="h-50 w-80 mr-16" src="logos/HOFF.png"></img>
+          <img className="h-50 w-80 mr-16" src="logos/GIO.png" alt="GIO Logo"/>
+          <img className="h-50 w-80 mr-16" src="logos/OMRON.png" alt="OMRON Logo"/>
+          <img className="h-50 w-80 mr-16" src="logos/HOFF.png" alt="HOFF Logo"/>
         </div>
       </div>
-      <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full h-70 p-4">
-            <h3>Next Section.....</h3>
+      <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full p-4">
+        <h3>Next Section.....</h3>
       </div>
     </div>
   );
 }
-
