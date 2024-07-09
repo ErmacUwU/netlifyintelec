@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <main className="flex-grow">
           {children}
         </main>
-        <footer className="bg-blue-700 text-white py-4">
+        <footer className="bg-gray-200 text-black py-4">
           <div className="container mx-auto px-4">
             <p>&copy; {new Date().getFullYear()} INTELEC. Todos los derechos reservados.</p>
           </div>

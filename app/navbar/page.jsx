@@ -16,8 +16,8 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="bg-blue-700 p-2 flex justify-evenly items-center">
-                <img className="h-5px" src='https://img1.wsimg.com/isteam/ip/acf9b939-4a69-4738-9593-ca7630db22ef/79382685_1265735470276938_6706444772455743488_.jpg/:/rs=h:78,cg:true,m/qt=q:95' alt='Logo Intelec'></img>
+            <nav className="bg-gray-200 p-2 flex justify-evenly items-center">
+                <img className="h-28" src='https://img1.wsimg.com/isteam/ip/acf9b939-4a69-4738-9593-ca7630db22ef/79382685_1265735470276938_6706444772455743488_.jpg/:/rs=h:78,cg:true,m/qt=q:95' alt='Logo Intelec'></img>
                 <ul className="flex space-x-4 j">
                     <li>
                         <div
@@ -29,7 +29,7 @@ const Navbar = () => {
                         >
                             <Link href="/" className=" text-white text-lg hover:text-gray-300">
                                 <button>
-                                    <img src={isHoveredInicio ? '/images/inicioClicked.png' : '/images/inicioUnclicked.png'} className="h-24 w-auto" alt="Inicio" />
+                                    <img src={isHoveredInicio ? '/images/inicioClicked.png' : '/images/inicioUnclicked.png'} className="h-28 w-auto" alt="Inicio" />
                                 </button>
                             </Link>
                         </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
                         >
                             <Link href="/historia" className="text-white text-lg hover:text-gray-300">
                                 <button>
-                                    <img src={isHoveredHistoria ? '/images/historiaClicked.png' : '/images/historiaUnclicked.png'} className="h-24 w-auto" alt="Historia" />
+                                    <img src={isHoveredHistoria ? '/images/historiaClicked.png' : '/images/historiaUnclicked.png'} className="h-28 w-auto" alt="Historia" />
                                 </button>
                             </Link>
                         </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
                         >
                             <Link href="/servicios" className="text-white text-lg hover:text-gray-300">
                                 <button>
-                                    <img src={isHoveredServicios ? '/images/serviciosClicked.png' : '/images/serviciosUnclicked.png'} className="h-24 w-auto" alt="Servicios" />
+                                    <img src={isHoveredServicios ? '/images/serviciosClicked.png' : '/images/serviciosUnclicked.png'} className="h-28 w-auto" alt="Servicios" />
                                 </button>
                             </Link>
                         </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
                         >
                             <Link href="/productos" className="text-white text-lg hover:text-gray-300">
                                 <button>
-                                    <img src={isHoveredProductos ? '/images/productosClicked.png' : '/images/productosUnclicked.png'} className="h-24 w-auto" alt="Productos" />
+                                    <img src={isHoveredProductos ? '/images/productosClicked.png' : '/images/productosUnclicked.png'} className="h-28 w-auto" alt="Productos" />
                                 </button>
                             </Link>
                         </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
                         >
                             <Link href="/about" className="text-white text-lg hover:text-gray-300">
                                 <button>
-                                    <img src={isHoveredAbout ? '/images/contactanosClicked.png' : '/images/contactanosUnclicked.png'} className="h-24 w-auto" alt="Contáctanos" />
+                                    <img src={isHoveredAbout ? '/images/contactanosClicked.png' : '/images/contactanosUnclicked.png'} className="h-28 w-auto" alt="Contáctanos" />
                                 </button>
                             </Link>
                         </div>
