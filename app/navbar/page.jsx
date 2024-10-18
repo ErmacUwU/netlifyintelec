@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
-import Link from "next/link"
+import Link from "next/link";
 
 const Navbar = () => {
     const [isHoveredInicio, setIsHoveredInicio] = useState(false);
@@ -8,6 +8,7 @@ const Navbar = () => {
     const [isHoveredServicios, setIsHoveredServicios] = useState(false);
     const [isHoveredProductos, setIsHoveredProductos] = useState(false);
     const [isHoveredAbout, setIsHoveredAbout] = useState(false);
+    const [isHoveredMotores, setIsHoveredMotores] = useState(false);
 
     const playHoverSound = () => {
         const audio = new Audio('/sounds/click-sound.mp3'); // Ruta del archivo de audio
@@ -17,8 +18,8 @@ const Navbar = () => {
     return (
         <div>
             <nav className="bg-gray-200 p-2 flex justify-evenly items-center">
-                <img className="h-28" src='https://img1.wsimg.com/isteam/ip/acf9b939-4a69-4738-9593-ca7630db22ef/79382685_1265735470276938_6706444772455743488_.jpg/:/rs=h:78,cg:true,m/qt=q:95' alt='Logo Intelec'></img>
-                <ul className="flex space-x-4 j">
+                <img className="h-24" src='/logos/intelec.png'></img>
+                <ul className="flex space-x-4">
                     <li>
                         <div
                             onMouseEnter={() => {
@@ -27,7 +28,7 @@ const Navbar = () => {
                             }}
                             onMouseLeave={() => setIsHoveredInicio(false)}
                         >
-                            <Link href="/" className=" text-white text-lg hover:text-gray-300">
+                            <Link href="/" className="text-white text-lg hover:text-gray-300">
                                 <button>
                                     <img src={isHoveredInicio ? '/images/inicioClicked.png' : '/images/inicioUnclicked.png'} className="h-28 w-auto" alt="Inicio" />
                                 </button>
@@ -98,10 +99,27 @@ const Navbar = () => {
                             </Link>
                         </div>
                     </li>
+
+                    <li>
+                        <div
+                            onMouseEnter={() => {
+                                setIsHoveredMotores(true);
+                                playHoverSound();
+                            }}
+                            onMouseLeave={() => setIsHoveredMotores(false)}
+                            className="flex justify-center items-center"
+                        >
+                            <Link href="/motores" className="text-white text-lg hover:text-gray-300 flex justify-center items-center"> 
+                            <button>
+                                    <img src={isHoveredMotores ? '/images/herramientasClicked.png' : '/images/herramientasUnclicked.png'} className="h-28 w-auto" alt="Herramientas" />
+                                </button>
+                            </Link>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

@@ -10,12 +10,12 @@ const Contactores = () => {
     },
     {
       nombre: "Contactores ABB AF",
-      url: "https://new.abb.com/low-voltage/es/productos/control-y-proteccion-de-motores/contactores-tripolares-y-reles-de-sobrecarga/contactores-tripolares-af",
+      url: "/fichas/ABB/AF/6b873693-c12e-4a39-8b0f-852b4991f57a.pdf",
       thumbnail: "https://webimages.imagebank.abb.com/public/default/product/9AAC184308/presentation"
     },
     {
       nombre: "Contactores EATON DIL",
-      url: "https://www.eaton.com/mx/es-mx/catalog/industrial-control--drives--automation---sensors/dil-contactors.html",
+      url: "/fichas/Eaton/DIL/DIL.pdf",
       thumbnail: "https://www.eaton.com/content/dam/eaton/products/industrialcontrols-drives-automation-sensors/en-globalprime/contactors/contactors/eaton-moeller-series-range-of-DILM-contactors-3-pole-for-motors-up-to-170%20A_750px%20X%20750px.jpg"
     },
     // Añade más catálogos aquí
@@ -31,7 +31,7 @@ const Contactores = () => {
             <h2 className="text-lg font-semibold mb-2 text-center">{catalogo.nombre}</h2>
             <Link href={catalogo.url} target="_blank" rel="noopener noreferrer">
               <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
-                Ver Mas
+                Ver Más
               </button>
             </Link>
           </div>

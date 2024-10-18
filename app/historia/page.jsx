@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 const Historia = () => {
-  return (
-    <div>Historia</div>
-  )
-}
+  
 
-export default Historia
+  return (
+    <div className="w-full h-full flex flex-col">
+      
+    </div>
+  );
+};
+
+export default Historia;
+
+
+
