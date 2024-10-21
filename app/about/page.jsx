@@ -32,7 +32,7 @@ const Contact = () => {
             </table>
           </div>
           <div className="p-2 w-full border-blue-500 flex items-center justify-center"> 
-          <Link href="https://wa.me/+526462602635" className='flex items-center justify-center m-2'>
+          <Link href="https://wa.me/+526462160078" className='flex items-center justify-center m-2'>
             <img src="logos/WSP.png" alt="Whatsapp Logo" className="w-80 h-30" />
           </Link>
           <Link href="https://mail.google.com/mail/u/1/#inbox?compose=GTvVlcRwRQQnbstJcLdRvRkMdBsSrspztBdZmBVlhpnJjctrwZQfhMKVbJBpcdrDtLCTBcWRlSPDw" className='flex items-center justify-center m-2'>

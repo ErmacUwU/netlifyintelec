@@ -1,121 +1,49 @@
 "use client";
 import React, { useState } from 'react';
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faHistory, faTools, faBoxOpen, faEnvelope, faCogs } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
-    const [isHoveredInicio, setIsHoveredInicio] = useState(false);
-    const [isHoveredHistoria, setIsHoveredHistoria] = useState(false);
-    const [isHoveredServicios, setIsHoveredServicios] = useState(false);
-    const [isHoveredProductos, setIsHoveredProductos] = useState(false);
-    const [isHoveredAbout, setIsHoveredAbout] = useState(false);
-    const [isHoveredMotores, setIsHoveredMotores] = useState(false);
+    const [hovered, setHovered] = useState(null);
 
     const playHoverSound = () => {
         const audio = new Audio('/sounds/click-sound.mp3'); // Ruta del archivo de audio
         audio.play();
     };
 
+    const handleMouseEnter = (index) => {
+        setHovered(index);
+        playHoverSound();
+    };
+
     return (
         <div>
-            <nav className="bg-gray-200 p-2 flex justify-evenly items-center">
-                <img className="h-24" src='/logos/intelec.png'></img>
+            <nav className="bg-white p-4 flex justify-between items-center">
+                <img className="h-24" src="/logos/intelec.png" alt="Logo Intelec" />
                 <ul className="flex space-x-4">
-                    <li>
-                        <div
-                            onMouseEnter={() => {
-                                setIsHoveredInicio(true);
-                                playHoverSound();
-                            }}
-                            onMouseLeave={() => setIsHoveredInicio(false)}
-                        >
-                            <Link href="/" className="text-white text-lg hover:text-gray-300">
-                                <button>
-                                    <img src={isHoveredInicio ? '/images/inicioClicked.png' : '/images/inicioUnclicked.png'} className="h-28 w-auto" alt="Inicio" />
+                    {[
+                        { href: "/", label: "Inicio", icon: faHome },
+                        { href: "/historia", label: "Historia", icon: faHistory },
+                        { href: "/servicios", label: "Servicios", icon: faCogs },
+                        { href: "/productos", label: "Productos", icon: faBoxOpen },
+                        { href: "/about", label: "Contáctanos", icon: faEnvelope },
+                        { href: "/motores", label: "Herramientas", icon: faTools },
+                    ].map((item, index) => (
+                        <li key={index}>
+                            <Link href={item.href}>
+                                <button
+                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    onMouseLeave={() => setHovered(null)}
+                                    className={`flex items-center p-3 rounded-lg transition-all duration-300 
+                                        ${hovered === index ? 'bg-indigo-500 text-white transform scale-105' : 'bg- text-gray-800 hover:bg-indigo-600'}`}
+                                >
+                                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                                    {item.label}
                                 </button>
                             </Link>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div
-                            onMouseEnter={() => {
-                                setIsHoveredHistoria(true);
-                                playHoverSound();
-                            }}
-                            onMouseLeave={() => setIsHoveredHistoria(false)}
-                        >
-                            <Link href="/historia" className="text-white text-lg hover:text-gray-300">
-                                <button>
-                                    <img src={isHoveredHistoria ? '/images/historiaClicked.png' : '/images/historiaUnclicked.png'} className="h-28 w-auto" alt="Historia" />
-                                </button>
-                            </Link>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div
-                            onMouseEnter={() => {
-                                setIsHoveredServicios(true);
-                                playHoverSound();
-                            }}
-                            onMouseLeave={() => setIsHoveredServicios(false)}
-                        >
-                            <Link href="/servicios" className="text-white text-lg hover:text-gray-300">
-                                <button>
-                                    <img src={isHoveredServicios ? '/images/serviciosClicked.png' : '/images/serviciosUnclicked.png'} className="h-28 w-auto" alt="Servicios" />
-                                </button>
-                            </Link>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div
-                            onMouseEnter={() => {
-                                setIsHoveredProductos(true);
-                                playHoverSound();
-                            }}
-                            onMouseLeave={() => setIsHoveredProductos(false)}
-                        >
-                            <Link href="/productos" className="text-white text-lg hover:text-gray-300">
-                                <button>
-                                    <img src={isHoveredProductos ? '/images/productosClicked.png' : '/images/productosUnclicked.png'} className="h-28 w-auto" alt="Productos" />
-                                </button>
-                            </Link>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div
-                            onMouseEnter={() => {
-                                setIsHoveredAbout(true);
-                                playHoverSound();
-                            }}
-                            onMouseLeave={() => setIsHoveredAbout(false)}
-                        >
-                            <Link href="/about" className="text-white text-lg hover:text-gray-300">
-                                <button>
-                                    <img src={isHoveredAbout ? '/images/contactanosClicked.png' : '/images/contactanosUnclicked.png'} className="h-28 w-auto" alt="Contáctanos" />
-                                </button>
-                            </Link>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div
-                            onMouseEnter={() => {
-                                setIsHoveredMotores(true);
-                                playHoverSound();
-                            }}
-                            onMouseLeave={() => setIsHoveredMotores(false)}
-                            className="flex justify-center items-center"
-                        >
-                            <Link href="/motores" className="text-white text-lg hover:text-gray-300 flex justify-center items-center"> 
-                            <button>
-                                    <img src={isHoveredMotores ? '/images/herramientasClicked.png' : '/images/herramientasUnclicked.png'} className="h-28 w-auto" alt="Herramientas" />
-                                </button>
-                            </Link>
-                        </div>
-                    </li>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </div>
