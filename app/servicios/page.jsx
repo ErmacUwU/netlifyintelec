@@ -16,37 +16,34 @@ const Servicios = () => {
   };
 
   return (
-    <div className="flex h-screen">
-      <div className="w-3/4 flex justify-center items-center overflow-hidden relative">
+    <div className="flex flex-col md:flex-row h-screen">
+      <div className="md:w-3/4 flex justify-center items-center overflow-hidden relative">
         <video
           key={currentIndex}
           src={videos[currentIndex].src}
           autoPlay
           loop
           muted
-          className="w-full h-full object-cover transform -translate-x-full transition-transform duration-500"
-          style={{ animation: 'slideInLeft 0.5s forwards' }}
+          className="w-full h-full object-cover"
         />
       </div>
-      <div className="w-1/4 flex flex-col justify-center items-center p-8 bg-gray-100 relative">
-        <p className="text-xl mb-8 text-center transform translate-x-full transition-transform duration-500"
-          style={{ animation: 'slideInRight 0.5s forwards' }}
-        >
+      <div className="md:w-1/4 flex flex-col justify-center items-center p-8 bg-gray-100">
+        <p className="text-lg md:text-xl mb-4 text-center">
           {videos[currentIndex].description}
         </p>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2 w-full">
           {videos.map((_, index) => (
             <button
               key={index}
               onClick={() => handleButtonClick(index)}
-              className={`px-4 py-2 text-lg cursor-pointer border-none bg-gray-300 transition-colors duration-300 hover:bg-gray-400 ${currentIndex === index ? 'bg-gray-500' : ''}`}
+              className={`px-4 py-2 text-lg cursor-pointer border-none bg-gray-300 transition-colors duration-300 hover:bg-gray-400 ${currentIndex === index ? 'bg-gray-500 text-white' : ''}`}
             >
               Servicio {index + 1}
             </button>
           ))}
         </div>
       </div>
-      <style jsx global>{`
+      <style jsx>{`
         @keyframes slideInLeft {
           from {
             transform: translateX(-100%);
