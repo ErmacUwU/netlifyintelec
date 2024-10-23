@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [hovered, setHovered] = useState(null);
@@ -35,7 +37,7 @@ const Navbar = () => {
                 className="md:hidden p-2" 
                 onClick={toggleMenu}
             >
-                <img src="/images/menu.gif" alt="Menu" className="h-6 w-6" />
+                <FontAwesomeIcon icon={faBars} className="text-2xl" /> {/* Icono de tres rayitas */}
             </button>
             <ul 
                 ref={menuRef} 

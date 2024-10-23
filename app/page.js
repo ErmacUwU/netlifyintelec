@@ -1,11 +1,11 @@
 "use client";
 import "@/styles/global.css"; // Asegúrate de que esta ruta sea correcta
-import bgvideo from "@/public/video/ensenada.webm";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Link from "next/link"; // Importa Link de Next.js
 
 export default function Home() {
   const sections = Array.from({ length: 42 }, (_, index) => ({
@@ -14,13 +14,16 @@ export default function Home() {
 
   return (
     <div className="relative m-0 flex flex-col h-full">
-      <video
-        src={bgvideo}
-        autoPlay
-        loop
-        muted
-        className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
-      ></video>
+      {/* Sección de video de fondo */}
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden z-[-1]">
+        <video
+          src="/video/ensenada.webm" // Ruta del video en la carpeta public
+          autoPlay
+          loop
+          muted
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Sección de bienvenida */}
       <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full p-8 animate-fade-in shadow-lg rounded-lg">
@@ -55,17 +58,17 @@ export default function Home() {
           navigation
           loop
           pagination={{ clickable: true }}
-          spaceBetween={20}
-          slidesPerView={2.5} // Cambia esto a 2 o más si quieres más imágenes visibles
+          spaceBetween={30} // Aumenta el espacio entre las imágenes
+          slidesPerView={3.5} // Aumenta el número de imágenes visibles
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          className="w-full max-w-2xl"
+          className="w-full max-w-6xl h-[400px]" // Ajusta el tamaño del contenedor
         >
           {sections.map((section, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="flex justify-center w-full">
+              <div className="flex justify-center w-full h-full">
                 <img
                   src={section.imgSrc}
-                  className="object-contain max-w-full max-h-96 h-auto w-auto rounded-lg shadow-md transition-transform duration-500 ease-in-out hover:scale-105"
+                  className="object-cover h-full w-full rounded-lg shadow-md transition-transform duration-500 ease-in-out hover:scale-105" // Asegúrate de que la imagen ocupe todo el contenedor
                   alt={`Imagen ${index + 1}`}
                 />
               </div>
@@ -94,12 +97,11 @@ export default function Home() {
       {/* Botón Call to Action */}
       <div className="bg-slate-300 bg-opacity-70 relative z-10 flex flex-col items-center w-full p-4 mt-8 rounded-lg shadow-lg">
         <h3 className="text-2xl mb-4 text-gray-800">¿Interesado en nuestros servicios?</h3>
-        <a
-          href="/about"
-          className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:scale-105 transform transition-transform duration-300"
-        >
-          Contáctanos
-        </a>
+        <Link href="/about" passHref>
+          <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:scale-105 transform transition-transform duration-300 cursor-pointer">
+            Contáctanos
+          </span>
+        </Link>
       </div>
     </div>
   );

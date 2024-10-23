@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from 'react';
 import Link from 'next/link';
 
@@ -36,17 +36,21 @@ const Contact = () => {
           </table>
         </div>
 
+        {/* Texto de contacto */}
+        <div className="text-center text-lg font-semibold text-gray-800">
+          <p>¡No dudes en contactarnos a través de los siguientes medios!</p>
+        </div>
+
         {/* Redes sociales */}
         <div className="w-full flex justify-center space-x-6">
           <Link href="https://wa.me/+526462160078">
-            <img src="logos/WSP.png" alt="Whatsapp Logo" className="w-52 h-auto transform hover:scale-110 transition" />
+            <img src="logos/WSP.png" alt="Whatsapp Logo" className="w-40 h-auto transform hover:scale-110 transition" />
           </Link>
           <Link href="https://mail.google.com">
-            <img src="logos/gmail.png" alt="Gmail Logo" className="w-56 h-auto p-0 transform hover:scale-110 transition" />
-
+            <img src="logos/gmail.png" alt="Gmail Logo" className="w-40 h-auto p-0 transform hover:scale-110 transition" />
           </Link>
           <Link href="https://www.facebook.com/Gregoyo55/">
-            <img src="logos/facebook.png" alt="Facebook Logo" className="w-16 h-auto transform hover:scale-110 transition" />
+            <img src="logos/facebook.png" alt="Facebook Logo" className="w-40 h-auto transform hover:scale-110 transition" />
           </Link>
         </div>
 
