@@ -8,7 +8,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link"; // Importa Link de Next.js
 
 export default function Home() {
-  const sections = Array.from({ length: 42 }, (_, index) => ({
+  const sections = Array.from({ length: 36 }, (_, index) => ({
     imgSrc: `/galeria/${index + 1}.jpeg`,
   }));
 
