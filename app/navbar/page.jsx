@@ -1,17 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-    faHome, 
-    faHistory, 
-    faTools, 
-    faBoxOpen, 
-    faEnvelope, 
-    faCogs, 
-    faBars, 
-    faTimes 
-} from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [hovered, setHovered] = useState(null);
@@ -46,19 +35,19 @@ const Navbar = () => {
                 className="md:hidden p-2" 
                 onClick={toggleMenu}
             >
-                <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+                <img src="/images/menu.gif" alt="Menu" className="h-6 w-6" />
             </button>
             <ul 
                 ref={menuRef} 
                 className={`absolute md:static top-16 right-0 bg-white shadow-lg md:flex md:space-x-4 ${isMenuOpen ? "flex-col" : "hidden"} md:flex-row z-50`}
             >
                 {[
-                    { href: "/", label: "Inicio", icon: faHome },
-                    { href: "/historia", label: "Historia", icon: faHistory },
-                    { href: "/servicios", label: "Servicios", icon: faCogs },
-                    { href: "/productos", label: "Productos", icon: faBoxOpen },
-                    { href: "/about", label: "Contáctanos", icon: faEnvelope },
-                    { href: "/motores", label: "Herramientas", icon: faTools },
+                    { href: "/", label: "Inicio", image: "/images/home.gif" },
+                    { href: "/historia", label: "Historia", image: "/images/history.gif" },
+                    { href: "/servicios", label: "Servicios", image: "/images/services.gif" },
+                    { href: "/productos", label: "Productos", image: "/images/products.gif" },
+                    { href: "/about", label: "Contáctanos", image: "/images/contact.gif" },
+                    { href: "/motores", label: "Herramientas", image: "/images/ajustes.gif" },
                 ].map((item, index) => (
                     <li key={index}>
                         <Link 
@@ -69,7 +58,7 @@ const Navbar = () => {
                                 ${hovered === index ? 'bg-indigo-500 text-white transform scale-105' : 'bg-transparent text-gray-800 hover:bg-indigo-600'}`}
                             onClick={() => setIsMenuOpen(false)} // Close menu on link click
                         >
-                            <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                            <img src={item.image} alt={item.label} className="mr-2 h-6 w-6" />
                             {item.label}
                         </Link>
                     </li>
