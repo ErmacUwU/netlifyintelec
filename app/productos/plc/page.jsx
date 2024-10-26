@@ -6,7 +6,7 @@ const Plc = () => {
     {
       nombre: "KIT PLC EASY-E4",
       url: "https://intelec332.github.io/catalogos/EASYE4.pdf",
-      thumbnail: "https://argoselectrica.com/wp-content/uploads/2024/01/PORTADILLAS-INDIVIDUAL-PAGINA-04-796x1024.jpg"
+      thumbnail: "https://e-centinela.com/cdn/shop/products/easy-box-e4-ac1_166x166_crop_center.jpg?v=1623954357"
     },
     
     // Añade más catálogos aquí
