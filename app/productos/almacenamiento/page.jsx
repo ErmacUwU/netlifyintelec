@@ -8,6 +8,11 @@ const Almacenamiento = () => {
       url: "http://argoselectrica.com/catalogo-individual/armarios.pdf",
       thumbnail: "https://argoselectrica.com/wp-content/uploads/2024/01/PORTADILLAS-INDIVIDUAL-PAGINA-04-796x1024.jpg"
     },
+    {
+      nombre: "Caja Mistral ABB",
+      url: "https://intelec332.github.io/catalogos/MISTRAL.pdf",
+      thumbnail: "https://ohmstore.mx/wp-content/uploads/230224145556_10_1748.jpg"
+    },
     // Añade más catálogos aquí
   ];
 
