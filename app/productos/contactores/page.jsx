@@ -5,19 +5,24 @@ const Contactores = () => {
   const catalogos = [
     {
       nombre: "Contactores WEG CWB",
-      url: "https://static.weg.net/medias/downloadcenter/h44/h3c/WEG-contactores-CWB-50066694-es.pdf",
+      url: "https://intelec332.github.io/catalogos/CWB.pdf",
       thumbnail: "https://static.weg.net/medias/images/h87/h32/GLOBAL_WDC_CONTACTOR_CWB_515Wx515H.webp"
     },
     {
       nombre: "Contactores ABB AF",
-      url: "/fichas/ABB/AF/6b873693-c12e-4a39-8b0f-852b4991f57a.pdf",
+      url: "https://intelec332.github.io/catalogos/AF.pdf",
       thumbnail: "https://webimages.imagebank.abb.com/public/default/product/9AAC184308/presentation"
     },
     {
       nombre: "Contactores EATON DIL",
-      url: "/fichas/Eaton/DIL/DIL.pdf",
+      url: "https://intelec332.github.io/catalogos/DIL.pdf",
       thumbnail: "https://www.eaton.com/content/dam/eaton/products/industrialcontrols-drives-automation-sensors/en-globalprime/contactors/contactors/eaton-moeller-series-range-of-DILM-contactors-3-pole-for-motors-up-to-170%20A_750px%20X%20750px.jpg"
     },
+    {
+      nombre: "Proposito Definido",
+      url: "https://intelec332.github.io/catalogos/CPD.pdf",
+      thumbnail: "https://www.iacsamexico.com.mx/wp-content/uploads/2020/07/SA-2P-30A.jpg",
+    }
     // Añade más catálogos aquí
   ];
 

@@ -7,13 +7,13 @@ const Botoneria = () => {
         
     {
       nombre: "Linea CSW 22mm WEG",
-      url: "https://static.weg.net/medias/downloadcenter/h6d/h42/WEG-mando-y-senalizacion-CSW-50036401-catalogo-es.pdf",
+      url: "https://intelec332.github.io/catalogos/CSW.pdf",
       thumbnail: "    https://static.weg.net/medias/images/hf1/h7b/GLOBAL_WDC_CTL_CS_22DMM_515Wx515H.webp"
     },
     {
-      nombre: "Linea CSW-M 22mm WEG",
-      url: "https://www.weg.net/catalog/weg/ES/es/Controls/Mando-y-Se%C3%B1alizaci%C3%B3n/L%C3%ADnea-CSW-M/c/GLOBAL_WDC_CSW_MONOBLOCO?h=15cc6ba5",
-      thumbnail: "https://static.weg.net/medias/images/h9b/h9f/WDC_LINHA_CSW_MONOBLOCO_515Wx515H.webp"
+      nombre: "Linea MSW WEG",
+      url: "https://intelec332.github.io/catalogos/MSW.pdf",
+      thumbnail: "https://static.weg.net/medias/images/h0e/h0d/MKT_WDC_GLOBAL_IMAGE_MSW_63_80_P3H_515Wx515H.webp"
     },
     // Añade más catálogos aquí
   ];

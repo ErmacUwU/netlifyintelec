@@ -6,22 +6,22 @@ const Protecciones = () => {
     
     {
       nombre: "Guardamotores WEG MPW",
-      url: "/fichas/WEG/MPW/MPW.pdf",
+      url: "https://intelec332.github.io/catalogos/MPW.pdf",
       thumbnail: "https://static.weg.net/medias/images/h96/ha5/GLOBAL_WDC_MPW_515Wx515H.webp"
     },
     {
       nombre: "Sobrecarga WEG RW",
-      url: "/fichas/WEG/RW/RW.pdf",
+      url: "https://intelec332.github.io/catalogos/RW.pdf",
       thumbnail: "https://static.weg.net/medias/images/h83/h8e/GLOBAL_WDC_RW_515Wx515H.webp"
     },
     {
       nombre: "Guardamotor ABB MSS",
-      url: "/fichas/ABB/MS/MS.pdf",
+      url: "https://intelec332.github.io/catalogos/MS.pdf",
       thumbnail: "https://www07.abb.com/images/librariesprovider84/Home-page/motorprotection.jpg?sfvrsn=1"
     },
     {
       nombre: "Sobrecarga ABB TF",
-      url: "/fichas/ABB/TF/TF.pdf",
+      url: "https://intelec332.github.io/catalogos/TF.pdf",
       thumbnail: "https://www07.abb.com/images/librariesprovider84/Products/Contactors/thermal-overload-relays.jpg?sfvrsn=1s"
     },
     // Añade más catálogos aquí
