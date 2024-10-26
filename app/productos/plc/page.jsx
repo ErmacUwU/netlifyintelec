@@ -14,7 +14,7 @@ const Plc = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Catálogos de Protecciones</h1>
+      <h1 className="text-2xl font-bold mb-4">Catálogos de PLC</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {catalogos.map((catalogo, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center">
