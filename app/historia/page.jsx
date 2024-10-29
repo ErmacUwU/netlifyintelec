@@ -3,28 +3,24 @@ import React from 'react';
 const Historia = () => {
   return (
     <div className="w-full h-full flex flex-col p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Historia y Extensión Comunitaria</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">Historia y extensión comunitaria</h1>
       <p className="text-lg mb-4">
-        <strong>INTELEC</strong> es una empresa familiar que se fundó en el año 2011 en la ciudad de Ensenada, Baja California. En nuestros inicios, nos establecimos en la Colonia Granados, donde contábamos con un equipo inicial de dos empleados y un Gerente General. Sin embargo, con el crecimiento de la demanda de nuestros servicios, en 2012 nos vimos en la necesidad de trasladarnos a un local más amplio que incluyera un taller de integración, lo que nos permitió mejorar nuestra capacidad de producción. Desde entonces, nuestras operaciones se han realizado en el Fraccionamiento Buenaventura, donde hemos podido expandir nuestras instalaciones.
-      </p>
-      
-      <p className="text-lg mb-4">
-        A lo largo de estos años, hemos tenido el privilegio de ofrecer empleo a más de 15 personas en nuestra comunidad. En INTELEC, entendemos la importancia de ser una empresa responsable, por lo que nos esforzamos por no solo cumplir con las normativas laborales obligatorias, sino también por fomentar el crecimiento y desarrollo de cada uno de nuestros colaboradores. Creemos que el éxito de la empresa está intrínsecamente ligado al bienestar de nuestro equipo.
+        <strong>INTELEC</strong> es una empresa familiar establecida en 2011 en la cd. de Ensenada, Baja California. En nuestro año de inicio estuvimos ubicados en la Colonia Granados y contábamos con dos empleados y un Gerente General. En 2012 fue necesario mudarnos a un local más grande que incluyera espacio para un taller de integración. Nuestro domicilio actual está, desde entonces, ubicado en el Fracc. Buenaventura. En estos años de operación hemos dado empleo a más de 15 personas. INTELEC es una empresa responsable que va más allá del cumplimiento con todas las prestaciones laborales de ley y promueve el crecimiento de sus empleados.
       </p>
 
-      <h2 className="text-2xl font-semibold mb-4">Apoyo a Estudiantes – Convenio con el ITE (Instituto Tecnológico de Ensenada)</h2>
+      <h2 className="text-2xl font-semibold mb-4">Apoyo a estudiantes – Convenio con el ITE (Instituto Tecnológico de Ensenada)</h2>
       <p className="text-lg mb-4">
-        En 2019, dimos un paso significativo al establecer nuestro primer convenio de colaboración con el <strong>Instituto Tecnológico de Ensenada</strong> (ITE). Este acuerdo tiene como objetivo principal apoyar a los estudiantes en la realización de su servicio social, sus prácticas profesionales y/o residencias. Nuestra empresa ofrece a estos estudiantes un apoyo económico equivalente al salario mínimo vigente, lo que ha permitido que muchos de ellos continúen creciendo profesionalmente incluso después de finalizar sus estudios. Algunos de estos prometedores jóvenes han sido incorporados a nuestra plantilla como empleados, lo que refleja nuestro compromiso con el desarrollo profesional y la integración de nuevos talentos en un ambiente laboral inclusivo y enriquecedor.
-      </p>
-      
-      <h2 className="text-2xl font-semibold mb-4">Patrocinio de Eventos Deportivos</h2>
-      <p className="text-lg mb-4">
-        Además, INTELEC se enorgullece de contribuir al desarrollo de jóvenes deportistas en nuestra comunidad. A través del financiamiento de uniformes y otros insumos necesarios, hemos apoyado a diversos clubes de fútbol, tanto masculinos como femeninos. Nuestro objetivo es promover una vida saludable y activa entre los jóvenes, fomentando no solo el deporte como una vía de desarrollo personal, sino también la construcción de lazos comunitarios y un sentido de pertenencia.
+        En 2019 establecimos el primer convenio de colaboración con el ITE para apoyar a estudiantes en la realización de su servicio social, prácticas profesionales y/o residencias; estos estudiantes reciben un apoyo económico durante su estadía equivalente al salario mínimo vigente y algunos han sido contratados como empleados por nuestra empresa al final de sus proyectos escolares. De esta manera nuestra empresa contribuye al desarrollo profesional de estudiantes por egresar al integrarlos a un ambiente de trabajo inclusivo que fomenta el aprendizaje.
       </p>
 
-      <h2 className="text-2xl font-semibold mb-4">Responsabilidad con el Cuidado del Ambiente</h2>
+      <h2 className="text-2xl font-semibold mb-4">Patrocinio de eventos deportivos</h2>
       <p className="text-lg mb-4">
-        En INTELEC, también estamos comprometidos con la protección del medio ambiente. Realizamos un esfuerzo consciente para minimizar nuestro impacto ecológico mediante la separación y reciclaje de residuos plásticos, cartones, aluminio y papel. Esta práctica nos permite contribuir a la sostenibilidad de nuestro entorno, asegurando que nuestros procesos sean responsables y alineados con las necesidades del planeta. Creemos firmemente que cada acción cuenta y que es nuestra responsabilidad cuidar de los recursos que nos brinda la naturaleza.
+        También hemos apoyado el desarrollo de jóvenes deportistas a través del financiamiento de uniformes y otros insumos a clubes de fútbol de nuestra ciudad tanto varoniles como femeniles.
+      </p>
+
+      <h2 className="text-2xl font-semibold mb-4">Responsabilidad con el cuidado del ambiente</h2>
+      <p className="text-lg mb-4">
+        En INTELEC separamos residuos plásticos, cartón, aluminio y papel para llevarlos a lugares de reciclaje y no generar tantos desechos.
       </p>
     </div>
   );
