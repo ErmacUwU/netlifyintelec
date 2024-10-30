@@ -19,11 +19,7 @@ const Contact = () => {
             </thead>
             <tbody>
               {[
-                { dia: 'Lunes', horario: '08:00 a.m. – 05:30 p.m.' },
-                { dia: 'Martes', horario: '08:00 a.m. – 05:30 p.m.' },
-                { dia: 'Miércoles', horario: '08:00 a.m. – 05:30 p.m.' },
-                { dia: 'Jueves', horario: '08:00 a.m. – 05:30 p.m.' },
-                { dia: 'Viernes', horario: '08:00 a.m. – 05:30 p.m.' },
+                { dia: 'Lunes - Viernes', horario: '08:00 a.m. – 05:30 p.m.' },
                 { dia: 'Sábado', horario: '08:00 a.m. – 01:30 p.m.' },
                 { dia: 'Domingo', horario: 'Cerrado' },
               ].map(({ dia, horario }) => (
@@ -62,8 +58,12 @@ const Contact = () => {
         {/* Teléfono */}
         <div className="flex items-center justify-center space-x-4">
           <img src="logos/phone.png" className="h-16 md:h-20" alt="Phone Icon" />
-          <h2 className="text-2xl md:text-3xl font-bold text-black">646-120-56-05</h2>
+          <div className="flex flex-col">
+            <h2 className="text-2xl md:text-3xl font-bold text-black">646-216-00-78</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-black mt-2">646-120-56-05</h2>
+          </div>
         </div>
+
 
         {/* Formulario */}
         <div className="w-full max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-md">

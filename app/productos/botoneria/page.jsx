@@ -15,7 +15,16 @@ const Botoneria = () => {
       url: "https://intelec332.github.io/catalogos/MSW.pdf",
       thumbnail: "https://static.weg.net/medias/images/h0e/h0d/MKT_WDC_GLOBAL_IMAGE_MSW_63_80_P3H_515Wx515H.webp"
     },
-    // Añade más catálogos aquí
+    {
+      nombre: "Linea RMQ-TITAN EATON",
+      url: "https://intelec332.github.io/catalogos/RMQTITAN.pdf",
+      thumbnail: "https://www.eaton.com/mdmfiles/PDM83948851/1160PIC-1396/500x500_72dpi"
+    },
+    {
+      nombre: "Auxiliares de Mando GIOVENZANA",
+      url: "https://intelec332.github.io/catalogos/BGIO.pdf",
+      thumbnail: "https://www.acomee.com.mx/fotos-representativas-marcas/fotosg/GIOVENZANA.jpg"
+    }
   ];
 
   return (
@@ -24,7 +33,7 @@ const Botoneria = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {catalogos.map((catalogo, index) => (
           <div key={index} className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center">
-            <img src={catalogo.thumbnail} alt={`Thumbnail de ${catalogo.nombre}`} className="w-32 h-32 object-cover mb-4 rounded-md" />
+            <img src={catalogo.thumbnail} alt={`Thumbnail de ${catalogo.nombre}`} className="w-32 h-32 object-cover mb-4 rounded-md hover:scale-110" />
             <h2 className="text-lg font-semibold mb-2 text-center">{catalogo.nombre}</h2>
             <Link href={catalogo.url} target="_blank" rel="noopener noreferrer">
               <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
