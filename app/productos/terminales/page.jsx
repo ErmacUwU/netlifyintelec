@@ -28,7 +28,8 @@ const Terminales = () => {
       nombre: "Terminales Navaja",
       url: "https://intelec332.github.io/catalogos/tnavaja.pdf",
       thumbnail: "https://e-centinela.com/cdn/shop/collections/SGE_Terminal_tipo_Navaja_90x90_crop_center.jpg?v=1520383585",
-    }
+    },
+    
   ]
   return (
     <div className="container mx-auto p-4">

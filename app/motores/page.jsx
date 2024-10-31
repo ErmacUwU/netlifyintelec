@@ -220,6 +220,27 @@ const Motores = () => {
           ))}
         </div>
       </div>
+      <div>
+          <iframe
+              src="https://www.circuitlab.com/editor/"
+              width="100%"
+              height="600px"
+              frameborder="0"
+              allowfullscreen>
+          </iframe>
+                    
+      </div>
+      <div class="flex justify-center items-center h-screen bg-gray-100">
+        <iframe 
+          src="https://www.falstad.com/circuit/circuitjs.html" 
+          width="100%" 
+          height="600" 
+          class="border rounded-lg shadow-lg"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+
     </div>
   );
 };
