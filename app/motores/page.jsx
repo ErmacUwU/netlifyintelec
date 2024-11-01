@@ -240,6 +240,16 @@ const Motores = () => {
         ></iframe>
       </div>
 
+      <div class="flex justify-center items-center h-screen bg-gray-100">
+        <iframe 
+          src="https://bin95.com/industrial/electrical-troubleshooting.html" 
+          width="100%" 
+          height="600" 
+          class="border rounded-lg shadow-lg"
+          allowfullscreen
+        ></iframe>
+      </div>
+
 
     </div>
   );

@@ -32,7 +32,9 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white p-4 flex justify-between items-center relative z-50">
-            <img className="h-24" src="/logos/intelec.png" alt="Logo Intelec" />
+            <Link href={"/"}>
+                <img className="h-24" src="/logos/intelec.png" alt="Logo Intelec" />
+            </Link>
             <button 
                 className="md:hidden p-2" 
                 onClick={toggleMenu}

@@ -16,7 +16,13 @@ const Variadores = () => {
     {
       nombre: "Linea CFW500 WEG",
       url: "https://intelec332.github.io/catalogos/WEG-cfw500-machinery-drives-50036260-catalogo-espanol.pdf",
-      thumbnail: "https://static.weg.net/medias/images/h47/h3b/GLOBAL_WDC_INVERTER_CFW500_515Wx515H.webp",}
+      thumbnail: "https://static.weg.net/medias/images/h47/h3b/GLOBAL_WDC_INVERTER_CFW500_515Wx515H.webp",
+    },
+    {
+      nombre: "Linea CFW300 WEG",
+      url: "https://intelec332.github.io/catalogos/CFW300.pdf",
+      thumbnail: "https://static.weg.net/medias/images/hab/hf3/WDC_InversorFrequencia_CFW300_Mec_Az_515Wx515H.jpg",
+    }
     // Añade más catálogos aquí
   ];
 
