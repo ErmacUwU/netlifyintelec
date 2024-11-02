@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Contact = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-400 to-blue-200 p-6">
-      <div className="w-full max-w-5xl bg-white rounded-xl shadow-xl p-8 space-y-8">
+      <div className="w-full max-w-5xl bg-white rounded-xl shadow-xl p-4 sm:p-6 md:p-8 space-y-8"> {/* Adjust padding based on screen size */}
 
         {/* Horarios */}
         <div className="w-full max-w-lg mx-auto">
@@ -63,7 +63,6 @@ const Contact = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-black mt-2">646-120-56-05</h2>
           </div>
         </div>
-
 
         {/* Formulario */}
         <div className="w-full max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
