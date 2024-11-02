@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const Contact = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-400 to-blue-200 p-6">
-      <div className="w-full max-w-5xl bg-white rounded-xl shadow-xl p-4 sm:p-6 md:p-8 space-y-8"> {/* Adjust padding based on screen size */}
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-400 to-blue-200 p-0 md:p-6"> {/* Set padding to 0 on mobile */}
+      <div className="w-full max-w-5xl bg-white rounded-xl shadow-xl p-0 md:p-4 lg:p-6 xl:p-8 space-y-8"> {/* Set padding to 0 on mobile */}
 
         {/* Horarios */}
         <div className="w-full max-w-lg mx-auto">
@@ -65,7 +65,7 @@ const Contact = () => {
         </div>
 
         {/* Formulario */}
-        <div className="w-full max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
+        <div className="w-full max-w-lg mx-auto bg-gray-100 p-4 md:p-6 rounded-lg shadow-md"> {/* Set padding to 4 on larger screens */}
           <h2 className="text-center text-2xl font-bold text-gray-800">Ponte en Contacto</h2>
           <form action="https://api.web3forms.com/submit" method="POST" className="mt-6 flex flex-col gap-4">
             <input type="hidden" name="access_key" value="31bbe0ae-23eb-49b0-aa38-39e8a3fde6c1" />
