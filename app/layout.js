@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
           <Navbar />
         </header>
         <main className="flex-grow">
+          
           {children}
         </main>
         <footer className="bg-gray-200 text-black py-4">

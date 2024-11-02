@@ -44,10 +44,10 @@ const ProductosLayout = ({ children }) => {
       </header>
 
       {/* Contenido Principal */}
-      <div className="flex flex-1 container mx-auto px-4 py-8">
+      <div className="flex flex-1 container mx-auto px-4 py-8 relative">
         {/* Barra lateral - Se muestra como menú en pantallas pequeñas */}
         <aside
-          className={`fixed md:relative z-20 top-0 left-0 h-full md:h-auto w-3/4 md:w-1/4 bg-white p-4 shadow-md transform ${
+          className={`absolute md:relative z-20 top-0 left-0 h-full md:h-auto w-3/4 md:w-1/4 bg-white p-4 shadow-md transform ${
             isMenuOpen ? 'translate-x-0' : '-translate-x-full'
           } transition-transform duration-300 ease-in-out md:translate-x-0`}
         >
