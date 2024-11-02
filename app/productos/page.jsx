@@ -2,11 +2,10 @@ import React from 'react';
 
 const Productos = () => {
   return (
-    <div className='w-full h-screen flex'>
-      
+    <div className="flex flex-col md:flex-row w-full h-screen p-4">
       {/* Contenido principal */}
-      <div className='w-3/4 bg-white p-4'>
-        <h2 className='text-xl font-bold mb-4'>Selecciona un producto para ver más detalles.</h2>
+      <div className="flex-1 bg-white p-4 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-4">Selecciona un producto para ver más detalles.</h2>
         <p>Aquí se mostrará el contenido específico del producto seleccionado.</p>
       </div>
     </div>

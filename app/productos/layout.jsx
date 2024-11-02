@@ -12,9 +12,9 @@ const ProductosLayout = ({ children }) => {
       </header>
 
       {/* Contenido Principal */}
-      <div className="flex flex-1 container mx-auto px-4 py-8">
+      <div className="flex flex-1 flex-col md:flex-row container mx-auto px-4 py-8">
         {/* Barra lateral */}
-        <aside className="w-1/4 bg-white p-4 rounded-lg shadow-md">
+        <aside className="md:w-1/4 w-full bg-white p-4 rounded-lg shadow-md mb-4 md:mb-0">
           <h2 className="text-lg font-semibold mb-4">Categorías</h2>
           <ul>
             {[
@@ -40,12 +40,10 @@ const ProductosLayout = ({ children }) => {
         </aside>
 
         {/* Contenido dinámico */}
-        <main className="flex-1 bg-white p-8 ml-4 rounded-lg shadow-md">
+        <main className="flex-1 bg-white p-8 rounded-lg shadow-md">
           {children}
         </main>
       </div>
-
-      
     </div>
   );
 };
