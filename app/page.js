@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="relative m-0 flex flex-col h-full">
       {/* Sección de video de fondo */}
-      <div className="absolute top-0 left-0 w-full h-full ">
+      <div className="fixed top-0 left-0 w-full h-full ">
         <img className="w-full h-full" src="images/ensenada.jpg"></img>
       </div>
 
