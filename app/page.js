@@ -48,26 +48,41 @@ export default function Home() {
           Conoce nuestros servicios
         </h2>
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          navigation
-          loop
-          spaceBetween={30} // Aumenta el espacio entre las imágenes
-          slidesPerView={3.5} // Aumenta el número de imágenes visibles
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          className="w-full max-w-6xl h-[400px]" // Ajusta el tamaño del contenedor
-        >
-          {sections.map((section, index) => (
-            <SwiperSlide key={index} className="flex justify-center select-none">
-              <div className="flex justify-center w-full h-full">
-                <img
-                  src={section.imgSrc}
-                  className="object-cover h-full w-full rounded-lg shadow-md transition-transform duration-500 ease-in-out hover:scale-105" // Asegúrate de que la imagen ocupe todo el contenedor
-                  alt={`Imagen ${index + 1}`}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  modules={[Navigation, Pagination, Autoplay]}
+  navigation
+  loop
+  spaceBetween={30}
+  slidesPerView={3.5}
+  autoplay={{ delay: 3000, disableOnInteraction: false }}
+  className="w-full max-w-6xl h-[400px]"
+  breakpoints={{
+    // Para pantallas pequeñas (640px y menores)
+    0: {
+      slidesPerView: 1, // Muestra 1 imagen a la vez
+    },
+    // Para pantallas medianas (640px a 1024px)
+    640: {
+      slidesPerView: 2,
+    },
+    // Para pantallas grandes (1024px y mayores)
+    1024: {
+      slidesPerView: 3.5, // Mantén el valor actual
+    },
+  }}
+>
+  {sections.map((section, index) => (
+    <SwiperSlide key={index} className="flex justify-center select-none">
+      <div className="flex justify-center w-full h-full">
+        <img
+          src={section.imgSrc}
+          className="object-cover h-full w-full rounded-lg shadow-md transition-transform duration-500 ease-in-out hover:scale-105"
+          alt={`Imagen ${index + 1}`}
+        />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       </div>
 
       {/* Sección de marcas */}

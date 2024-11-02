@@ -27,9 +27,8 @@ const ProductosLayout = ({ children }) => {
               'variadores', 
               'plc', 
               'relevadores', 
-              'herramienta', 
-              'terminales', 
-              'sensores'
+              'terminales',
+              'conexion', 
             ].map(category => (
               <li key={category} className="cursor-pointer mb-2">
                 <Link href={`/productos/${category}`} className="block px-4 py-2 rounded hover:bg-gray-200 transition-colors duration-200">
