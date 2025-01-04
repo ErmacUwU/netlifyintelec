@@ -40,9 +40,9 @@ const Contact = () => {
         {/* Redes Sociales */}
         <section className="flex justify-center space-x-6">
           {[
-            { href: "https://wa.me/+526462160078", src: "logos/WSP.png", alt: "Whatsapp Logo" },
-            { href: "https://mail.google.com", src: "logos/gmail.png", alt: "Gmail Logo" },
-            { href: "https://www.facebook.com/Gregoyo55/", src: "logos/facebook.png", alt: "Facebook Logo" },
+            { href: "https://wa.me/+526462160078", src: "/logos/WSP.png", alt: "Whatsapp Logo" },
+            { href: "https://mail.google.com/mail/?view=cm&fs=1&to=ventas.integracionelectrica@gmail.com", src: "/logos/gmail.png", alt: "Gmail Logo" },
+            { href: "https://www.facebook.com/Gregoyo55/", src: "/logos/facebook.png", alt: "Facebook Logo" },
           ].map(({ href, src, alt }) => (
             <Link key={alt} href={href}>
               <img src={src} alt={alt} className="w-12 h-12 md:w-16 md:h-16 transform hover:scale-110 transition" />

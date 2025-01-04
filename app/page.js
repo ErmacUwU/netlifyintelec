@@ -1,5 +1,4 @@
 "use client";
-import "@/styles/global.css"; // Asegúrate de que esta ruta sea correcta
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
